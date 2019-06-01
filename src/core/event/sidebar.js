@@ -69,7 +69,7 @@ export function getAndActive(router, el, isParent, autoTitle) {
   if (el != null) {
     links = dom.findAll(el, 'a')
   }
-  const hash = decodeURI(router.toURL(router.getCurrentPath()))
+  const hash = router.toURL(router.getCurrentPath())
   let target
 
   links.sort((a, b) => b.href.length - a.href.length).forEach(a => {
